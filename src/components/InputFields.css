@@ -1,0 +1,10 @@
+.input-fields5 {
+  width: 432.3px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-9xs-8);
+  box-sizing: border-box;
+  max-width: 100%;
+}

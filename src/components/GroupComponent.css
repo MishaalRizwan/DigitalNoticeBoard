@@ -1,0 +1,31 @@
+.user-name {
+  width: 391px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.user-name-parent {
+  height: 92px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  padding: 0 0 var(--padding-50xl);
+  box-sizing: border-box;
+  gap: var(--gap-4xl);
+  max-width: 95%;
+  z-index: 1;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+}
+
+@media screen and (max-width: 450px) {
+  .user-name {
+    font-size: var(--font-size-base);
+  }
+}

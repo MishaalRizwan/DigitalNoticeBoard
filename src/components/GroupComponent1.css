@@ -1,0 +1,38 @@
+.instance-child {
+  width:100%;
+  position:absolute;
+  margin: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-7xs);
+  background-color: var(--color-white);
+  border: 0.6px solid var(--color-cornflowerblue);
+  box-sizing: border-box;
+}
+.enter-your-password {
+  width: 146px;
+  border: 0;
+  outline: 0;
+  font-weight: 300;
+  font-family: var(--font-roboto);
+  font-size: var(--font-size-base);
+  background-color: transparent;
+  position: relative;
+  color: var(--color-silver);
+  text-align: left;
+  display: inline-block;
+  padding: 0;
+  z-index: 1;
+}
+.group-div {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-lgi) var(--padding-8xl) var(--padding-2xl);
+  position: relative;
+  flex-shrink: 0;
+}

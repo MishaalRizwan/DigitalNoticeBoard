@@ -1,0 +1,28 @@
+.confrim-password {
+  width: 400px;
+  position:absolute;
+  display:contents;
+}
+.confrim-password-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 10px;
+  display:inline-flex;
+  flex-direction:column;
+  align-items: flex-start;
+  justify-content:flex-start;
+  gap: var(--gap-4xs-5);
+
+  z-index: 1;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+}
+@media screen and (max-width: 450px) {
+  .confrim-password {
+    font-size: var(--font-size-base);
+  }
+}

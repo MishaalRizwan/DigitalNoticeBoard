@@ -1,0 +1,98 @@
+/* Global styles for better layout and accessibility */
+html, body {
+  height: 100%; /* Ensure full screen height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow: auto; /* Enable scrolling */
+  font-family: Arial, sans-serif; /* Set a clean, readable font */
+  color: #333; /* Standard text color */
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Container styling for layout consistency */
+.container {
+  min-height: 100vh; /* Occupy full screen height */
+  padding: 20px;
+  overflow-y: auto; /* Vertical scrolling */
+  box-sizing: border-box; /* Include padding in dimensions */
+  background: #fff; /* White background for a clean layout */
+  border-radius: 8px; /* Subtle rounding for modern look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Headings for better spacing and visibility */
+h2, h3 {
+  margin-top: 20px;
+  color: #0056b3; /* Highlight headings with a subtle blue */
+  font-weight: bold; /* Make headings stand out */
+}
+
+/* Table styling for better usability */
+table {
+  width: 100%; /* Full width table */
+  margin-top: 20px; /* Spacing above table */
+  border-collapse: collapse; /* Remove default table spacing */
+  background: #fefefe; /* Light background */
+  border: 1px solid #ddd; /* Subtle border */
+}
+
+table th, table td {
+  padding: 12px; /* Add padding inside cells */
+  text-align: left; /* Align text to the left */
+  border-bottom: 1px solid #ddd; /* Add row borders */
+}
+
+table th {
+  background: #f2f2f2; /* Slightly darker background for headers */
+  font-weight: bold; /* Emphasize headers */
+}
+
+table tr:nth-child(even) {
+  background: #f9f9f9; /* Alternate row background for readability */
+}
+
+table tr:hover {
+  background: #f1f1f1; /* Highlight row on hover */
+}
+
+/* Form field spacing and responsiveness */
+.mt-4 {
+  margin-top: 20px;
+}
+
+form input, form button {
+  width: 100%; /* Full width for small screens */
+  padding: 10px; /* Add padding inside fields */
+  margin-top: 10px; /* Spacing between fields */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Subtle rounding */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+form button {
+  background: #0056b3; /* Blue button color */
+  color: #fff; /* White text for contrast */
+  font-weight: bold; /* Make button text stand out */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background 0.3s ease; /* Smooth hover transition */
+}
+
+form button:hover {
+  background: #003d80; /* Darker blue on hover */
+}
+
+/* Profile picture preview styling */
+.profile-pic {
+  display: block;
+  margin: 20px auto; /* Center the image */
+  border-radius: 50%; /* Circular preview */
+  border: 2px solid #ddd; /* Border around image */
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  object-fit: cover; /* Ensure image scales properly */
+}
+
+/* Ensure scrolling even for short content */
+html {
+  overflow-y: scroll;
+}

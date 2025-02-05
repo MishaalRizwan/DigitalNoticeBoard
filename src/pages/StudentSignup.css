@@ -1,0 +1,464 @@
+.back-icon1 {
+    width: 100%;
+    height: 1150.6px;
+    position: absolute;
+    margin: 0 !important;
+    right: 0;
+    bottom: 0.4px;
+    left: 0;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    opacity: 0.2;
+    object-fit: cover;
+  }
+  .rectangle-div {
+    height: 69px;
+    width: 1440px;
+    position: relative;
+    background-color: var(--color-deepskyblue);
+    display: none;
+    max-width: 100%;
+  }
+  .image-1-icon1,
+  .numl1 {
+    position: relative;
+    z-index: 1;
+  }
+  .image-1-icon1 {
+    height: 63px;
+    width: 63px;
+    border-radius: var(--br-88xl);
+    object-fit: cover;
+  }
+  .numl1 {
+    text-decoration: none;
+    align-self: stretch;
+    font-weight: 700;
+    color: inherit;
+  }
+  .frame-header,
+  .numl-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  .numl-wrapper {
+    width: 132.8px;
+    flex-direction: column;
+    padding: var(--padding-xs) 0 0;
+  }
+  .frame-header {
+    align-self: stretch;
+    background-color: var(--color-deepskyblue);
+    flex-direction: row;
+    padding: var(--padding-10xs) var(--padding-5xl);
+    gap: var(--gap-6xs);
+    top: 0;
+    z-index: 99;
+    position: sticky;
+    max-width: 100%;
+    text-align: left;
+    font-size: var(--font-size-21xl);
+    color: var(--color-white);
+    font-family: var(--font-roboto);
+  }
+  .arrow-icon1,
+  .placeholder-background-icon {
+    position: relative;
+    object-fit: cover;
+    z-index: 1;
+  }
+  .arrow-icon1 {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+  }
+  .placeholder-background-icon {
+    width: 595px;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .arrow-parent,
+  .placeholder-background-wrapper {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .placeholder-background-wrapper {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .arrow-parent {
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 84px;
+    min-width: 432px;
+  }
+  .frame-child1 {
+    width: 516px;
+    height: 727px;
+    position: relative;
+    box-shadow: 0 4px 64px rgba(0, 0, 0, 0.05);
+    border-radius: var(--br-3xs);
+    background-color: var(--color-steelblue);
+    border: 0.5px solid var(--color-gray);
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+  }
+  .welcome1 {
+    margin: 0;
+    flex: 1;
+    position: relative;
+    font-size: var(--font-size-6xl);
+    font-weight: 700;
+    font-family: var(--font-roboto);
+    color: var(--color-white);
+    text-align: left;
+    z-index: 1;
+  }
+  .welcome-wrapper {
+    width: 145px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-12xs) 0 var(--padding-11xs);
+    box-sizing: border-box;
+  }
+  .student-person,
+  .sign-up-to {
+    margin: 0;
+    position: relative;
+    font-family: var(--font-roboto);
+    color: var(--color-white);
+    text-align: left;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .sign-up-to {
+    height: 45.1px;
+    width: 161.4px;
+    font-size: var(--font-size-12xl);
+    font-weight: 500;
+    z-index: 1;
+  }
+  .student-person {
+    width: 236px;
+    font-size: var(--font-size-13xl);
+    font-weight: 700;
+    z-index: 3;
+  }
+  .student-person-wrapper {
+    width: 225.8px;
+    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .student-person-wrapper,
+  .frame-parent1,
+  .sign-up-to-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sign-up-to-parent {
+    flex-direction: row;
+    row-gap: 20px;
+  }
+  .frame-parent1 {
+    flex-direction: column;
+    padding: 0 0 var(--padding-10xs);
+    box-sizing: border-box;
+    gap: var(--gap-6xs-1);
+    max-width: 100%;
+  }
+  .invisible-1-icon1 {
+    position: absolute;
+    top: 49.9px;
+    left: 382.1px;
+    width: 21.5px;
+    height: 20.2px;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .frame-child2,
+  .input-fields,
+  .input-fields1 {
+    width: 432.3px;
+    height: 92.2px;
+    position: relative;
+    max-width: 100%;
+  }
+  .frame-child2,
+  .input-fields1 {
+    height: 98.9px;
+  }
+  .frame-child2 {
+    height: 54.7px;
+    border-radius: var(--br-7xs);
+    background: linear-gradient(180deg, #00568e, #0068a9);
+    display: none;
+  }
+  .button-icon {
+    height: 38.4px;
+    width: 46px;
+    position: relative;
+    z-index: 3;
+  }
+  .register3 {
+    align-self: stretch;
+    position: relative;
+    font-size: var(--font-size-5xl);
+    font-family: var(--font-roboto);
+    color: var(--color-white);
+    text-align: left;
+    z-index: 1;
+  }
+  .group-button,
+  .register-wrapper {
+    width: 104.2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-9xs-9) 0 0;
+    box-sizing: border-box;
+  }
+  .group-button {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-6xs-7) var(--padding-xl) var(--padding-3xs-5)
+      var(--padding-22xl);
+    background-color: transparent;
+    width: 432.3px;
+    border-radius: var(--br-7xs);
+    background: linear-gradient(180deg, #00568e, #0068a9);
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--gap-9xs);
+    max-width: 100%;
+    z-index: 1;
+  }
+  .already-have-an {
+    font-weight: 300;
+    font-family: var(--font-roboto);
+    color: var(--color-white);
+  }
+  .span1 {
+    color: var(--color-midnightblue);
+    white-space: pre-wrap;
+  }
+  .login2 {
+    color: var(--color-yellow);
+  }
+  .login1 {
+    font-weight: 600;
+    font-family: var(--font-roboto);
+  }
+  .already-have-an-container {
+    flex: 1;
+    position: relative;
+    font-size: var(--font-size-base);
+    text-align: left;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .already-have-an-account-logi-wrapper {
+    width: 410.3px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-50xl) 0 var(--padding-51xl);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .group-form {
+    margin: 0;
+    align-self: stretch;
+    box-shadow: 0 4px 64px rgba(0, 0, 0, 0.05);
+    border-radius: var(--br-3xs);
+    background-color: var(--color-steelblue);
+    border: 0.5px solid var(--color-gray);
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: var(--padding-30xl) var(--padding-16xl) var(--padding-4xl);
+    gap: var(--gap-lgi-2);
+    z-index: 1;
+  }
+  .frame-div,
+  .frame-wrapper,
+  .group-form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .frame-wrapper {
+    flex-direction: column;
+    padding: var(--padding-16xl) 0 0;
+    box-sizing: border-box;
+    min-width: 516px;
+  }
+  .frame-div {
+    align-self: stretch;
+    flex-direction: row;
+    gap: 162px;
+  }
+  .national-university-of1 {
+    margin: 0;
+    flex: 1;
+    position: relative;
+    font-size: inherit;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    font-family: inherit;
+    z-index: 1;
+  }
+  .footer1,
+  .frame-section {
+    display: flex;
+    max-width: 100%;
+  }
+  .footer1 {
+    width: 1291px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 184px 0 183px;
+    box-sizing: border-box;
+  }
+  .frame-section {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: var(--gap-6xl);
+    text-align: center;
+    font-size: var(--font-size-29xl);
+    color: var(--color-white);
+    font-family: var(--font-roboto);
+  }
+  .student-signup,
+  .student-signup-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  .student-signup-inner {
+    width: 1390px;
+    flex-direction: row;
+    padding: 0 var(--padding-5xl);
+    max-width: 100%;
+  }
+  .student-signup {
+    width: 100%;
+    position: relative;
+    background: linear-gradient(
+      0deg,
+      #00aeef,
+      #009ee1 25%,
+      #0092d7 50%,
+      #0081c8 75%,
+      #0072bb
+    );
+    overflow: hidden;
+    flex-direction: column;
+    padding: 0 0 var(--padding-87xl);
+    gap: var(--gap-7xs);
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  @media screen and (max-width: 1200px) {
+    .frame-wrapper {
+      flex: 1;
+    }
+    .frame-div {
+      gap: 81px;
+      flex-wrap: wrap;
+    }
+    .footer1 {
+      padding-left: 91px;
+      padding-right: 92px;
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .sign-up-to {
+      font-size: var(--font-size-6xl);
+    }
+    .student-person {
+      font-size: var(--font-size-7xl);
+    }
+    .national-university-of1 {
+      font-size: var(--font-size-19xl);
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .arrow-parent {
+      gap: 42px;
+      min-width: 100%;
+    }
+    .sign-up-to-parent {
+      flex-wrap: wrap;
+    }
+    .group-form {
+      padding-top: var(--padding-13xl);
+      padding-bottom: var(--padding-xl);
+      box-sizing: border-box;
+    }
+    .frame-wrapper {
+      min-width: 100%;
+    }
+    .frame-div {
+      gap: var(--gap-21xl);
+    }
+    .footer1 {
+      padding-left: 45px;
+      padding-right: 46px;
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .arrow-parent {
+      gap: var(--gap-2xl);
+    }
+    .welcome1 {
+      font-size: var(--font-size-xl);
+    }
+    .student-person,
+    .register3,
+    .sign-up-to {
+      font-size: var(--font-size-lgi);
+    }
+    .group-button {
+      flex-wrap: wrap;
+    }
+    .already-have-an-account-logi-wrapper {
+      padding-left: var(--padding-xl);
+      padding-right: var(--padding-xl);
+      box-sizing: border-box;
+    }
+    .frame-div {
+      gap: var(--gap-xl);
+    }
+    .national-university-of1 {
+      font-size: var(--font-size-10xl);
+    }
+    .footer1 {
+      padding-left: var(--padding-xl);
+      padding-right: var(--padding-xl);
+      box-sizing: border-box;
+    }
+  }
+  .error-message {
+    color: red; /* Change to your desired error color */
+    font-size: 11px; /* Adjust the font size to make it smaller */
+    margin-top: 5px; /* Add some space above the error message */
+  }

@@ -1,0 +1,81 @@
+.content1 {
+  align-self: stretch;
+  background-color: var(--color-deepskyblue);
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center items vertically */
+  justify-content: flex-start; /* Align items to the left */
+  padding: var(--padding-10xs) var(--padding-5xl);
+  gap: 5px;
+  top: 0;
+  z-index: 99; /* Ensure this is above the overlay */
+  position: sticky;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-21xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+}
+
+.image-1-icon2 {
+  height: 63px;
+  width: 63px;
+  border-radius: var(--br-88xl);
+  object-fit: cover;
+}
+
+.number-panel {
+  display: flex;
+  align-items: center; /* Center align text with logo */
+  margin-left: 10px; /* Add space between logo and text */
+}
+
+.numl2 {
+  text-decoration: none;
+  font-weight: 700;
+  color: inherit;
+}
+
+/* User info styles */
+.user-info {
+  display: flex;
+  align-items: center; /* Center the profile picture and text */
+  color: white; /* Ensure text color contrasts with background */
+margin-right: 5px;
+}
+
+.profile-pic {
+  width: 30px; /* Adjust size as needed */
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 6px;
+  margin-top: -4px;
+  object-fit: cover;
+  cursor: pointer; /* Change cursor to indicate clickability */
+}
+.user-greeting {
+  font-size: 20px;
+  font-weight: bold; /* Adjust font size for better readability */
+  --font-roboto: Roboto;
+}
+
+/* Added style for the logout button */
+.logout-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #ff1a1a; /* Darker red on hover */
+}
+
+.toast-blue {
+  background-color: #61aeff !important; /* Blue color */
+  color: white !important; /* Text color */
+}

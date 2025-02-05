@@ -1,0 +1,21 @@
+.footer {
+    margin-top: 40px; /* Pushes the footer to the bottom of the page */
+    padding: 50px; /* Reduced padding for a smaller footer */
+    text-align: center;
+    color: var(--color-white);
+    font-family: var(--font-roboto);
+    z-index: 2;
+    position: relative;
+    font-size: 20px; /* Reduced font size for a smaller footer */
+  }
+  
+  /* Smaller font size for National University of Modern Languages in footer */
+  .national-university-of-footer {
+    font-size: 20px; /* Smaller font size */
+    letter-spacing: 0.02em;
+    text-align: center;
+    margin-top: 0;
+    margin-left: 40%;
+    color: var(--color-white);
+  }
+  

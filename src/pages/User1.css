@@ -1,0 +1,333 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  position: relative;
+  background-image: url('C:/Users/misha/Desktop/noticeboardapp/public/back@2x.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 120px; /* Ensure space for footer */
+}
+
+/* Pseudo-element for background image with reduced opacity */
+.user::after {
+  content: '';
+  position: absolute; /* Position it absolutely to cover the entire user div */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('C:/Users/misha/Desktop/noticeboardapp/public/back@2x.png'); /* Set the same background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  opacity: 0.2; /* Adjust opacity to desired value */
+  z-index: 0; /* Ensure it's behind the content */
+}
+
+/* Pseudo-element for gradient overlay */
+.user::before {
+  content: '';
+  position: absolute; /* Position it absolutely to cover the entire user div */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    #00aeef,
+    #009ee1 25%,
+    #0092d7 50%,
+    #0081c8 75%,
+    #0072bb
+  ); /* Use your specified gradient */
+  opacity: 0.7; /* Adjust opacity as needed */
+  z-index: 1; /* Ensure it's above the image */
+}
+
+.content-child {
+  height: 69px;
+  width: 100%; /* Adjusted width for responsive design */
+  position: relative;
+  background-color: var(--color-deepskyblue);
+  display: none;
+  max-width: 100%;
+}
+
+.image-1-icon2,
+.numl2 {
+  position: relative;
+  z-index: 2; /* Ensure this is above the overlay */
+}
+
+.image-1-icon2 {
+  height: 63px;
+  width: 63px;
+  border-radius: var(--br-88xl);
+  object-fit: cover;
+}
+
+.numl2 {
+  text-decoration: none;
+  align-self: stretch;
+  font-weight: 700;
+  color: inherit;
+}
+
+.content1,
+.number-panel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.number-panel {
+  width: 132.8px;
+  flex-direction: column;
+  padding: var(--padding-xs) 0 0;
+}
+
+.content1 {
+  align-self: stretch;
+  background-color: var(--color-deepskyblue);
+  flex-direction: row;
+  padding: var(--padding-10xs) var(--padding-5xl);
+  gap: 5px;
+  top: 0;
+  z-index: 99; /* Ensure this is above the overlay */
+  position: sticky;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-21xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+  
+}
+
+/* Add margin to the bottom of the last container */
+.login-container-parent {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin-top: 40px; /* Adjust this value to move the cards downwards */
+  margin-bottom: 40px; /* Increased space between the last container and footer */
+}
+
+
+.side-panel,
+.user {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.side-panel {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 0 var(--padding-2xl);
+  max-width: 100%;
+  gap:30;
+  text-align: center;
+  font-size: var(--font-size-29xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+
+}
+
+/* Footer Section Styles */
+.footer-section {
+  background-color: #f9f9f9;
+  padding: 20px 20px;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 10;
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  flex-shrink: 0;
+}
+
+/* Footer Left Section */
+.footer-left {
+  flex: 1;
+  padding-right: 15px;
+}
+
+.footer-contact h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.footer-contact p {
+  margin: 3px 0;
+  color: #555;
+}
+
+.footer-social-icons {
+  margin-top: 10px;
+}
+
+.footer-social-icons a {
+  margin-right: 10px;
+}
+
+.footer-social-icons img {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s;
+}
+
+.footer-social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Center Section */
+.footer-center {
+  flex: 1;
+  padding-left: 15px;
+}
+
+.footer-center h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.footer-center ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-center li {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.footer-center li:hover {
+  color: #00AEEF;
+  cursor: pointer;
+}
+
+/* Footer Right Section */
+.footer-right {
+  flex: 1;
+  padding-left: 15px;
+}
+
+.footer-right h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.campuses {
+  display: flex;
+  flex-direction: column;
+}
+
+.campuses div {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.campuses div:hover {
+  color: #00AEEF;
+  cursor: pointer;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-bottom p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: #00AEEF;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+/* Admin Button Styles */
+.admin-button {
+  background-color: #fff;
+  color: #00AEEF;
+  border: none;
+  padding: 12px 25px; /* Slightly larger padding for a more prominent button */
+  font-size: 1.1rem; /* Slightly larger font size */
+  font-weight: 600; /* Bold text for emphasis */
+  cursor: pointer;
+  border-radius: 8px; /* More rounded corners */
+  margin-left: auto; /* Automatically places the button to the far right */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  box-shadow: 0 4px 10px rgba(0, 174, 239, 0.3); /* Subtle shadow for depth */
+}
+
+/* Hover Effect */
+.admin-button:hover {
+  background-color: #00AEEF;
+  color: #fff;
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 6px 15px rgba(0, 174, 239, 0.4); /* Deeper shadow when hovered */
+}
+
+/* Focus Effect */
+.admin-button:focus {
+  outline: none; /* Remove default focus outline */
+  border: 2px solid #00AEEF; /* Custom border on focus */
+  box-shadow: 0 0 0 4px rgba(0, 174, 239, 0.3); /* Glowing effect around the button */
+}
+
+/* Disabled Button */
+.admin-button:disabled {
+  background-color: #ddd;
+  color: #888;
+  cursor: not-allowed;
+  box-shadow: none; /* Remove shadow for disabled state */
+}
+
+
+

@@ -1,0 +1,500 @@
+.back-icon3 {
+    width: 100%;
+    height: 954.6px;
+    position: absolute;
+    margin: 0 !important;
+    right: 0;
+    bottom: 0.4px;
+    left: 0;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    opacity: 0.2;
+    object-fit: cover;
+  }
+  .frame-child3 {
+    height: 69px;
+    width: 1440px;
+    position: relative;
+    background-color: var(--color-deepskyblue);
+    display: none;
+    max-width: 100%;
+  }
+  .image-1-icon3,
+  .numl3 {
+    position: relative;
+    z-index: 1;
+  }
+  .image-1-icon3 {
+    height: 63px;
+    width: 63px;
+    border-radius: var(--br-88xl);
+    object-fit: cover;
+  }
+  .numl3 {
+    text-decoration: none;
+    align-self: stretch;
+    font-weight: 700;
+    color: inherit;
+  }
+  .numl-container,
+  .rectangle-parent1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  .numl-container {
+    width: 132.8px;
+    flex-direction: column;
+    padding: var(--padding-xs) 0 0;
+  }
+  .rectangle-parent1 {
+    align-self: stretch;
+    background-color: var(--color-deepskyblue);
+    flex-direction: row;
+    padding: var(--padding-10xs) var(--padding-5xl);
+    gap: var(--gap-6xs);
+    top: 0;
+    z-index: 99;
+    position: sticky;
+    max-width: 100%;
+    text-align: left;
+    font-size: var(--font-size-21xl);
+    color: var(--color-white);
+    font-family: var(--font-roboto);
+  }
+  .arrow-icon2 {
+    height: 70px;
+    width: 70px;
+    position: relative;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .frame-child4 {
+    width: 505px;
+    height: 673px;
+    position: relative;
+    box-shadow: 0 4px 64px rgba(0, 0, 0, 0.05);
+    border-radius: var(--br-3xs);
+    background-color: var(--color-steelblue);
+    border: 0.5px solid var(--color-gray);
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+  }
+  .sign-in-to1,
+  .welcome2 {
+    margin: 0;
+    position: relative;
+    font-size: var(--font-size-6xl);
+    font-weight: 700;
+    font-family: var(--font-roboto);
+    color: var(--color-white);
+    text-align: left;
+    z-index: 1;
+  }
+  .sign-in-to1 {
+    font-size: var(--font-size-12xl);
+    font-weight: 500;
+  }
+  .sign-in-to-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-12xs) 0 0;
+  }
+  .student-person1 {
+    margin: 0;
+    position: relative;
+    font-size: var(--font-size-13xl);
+    font-weight: 700;
+    font-family: var(--font-roboto);
+    color: var(--color-white);
+    text-align: left;
+    z-index: 1;
+  }
+  .frame-parent4 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-3xs);
+    max-width: 100%;
+  }
+  .frame-wrapper1 {
+    flex-direction: row;
+    padding: 0 0 0 var(--padding-5xs);
+  }
+  .credentials1,
+  .frame-wrapper1,
+  .welcome-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .welcome-parent {
+    flex-direction: column;
+    padding: 0 0 var(--padding-lg);
+    gap: var(--gap-lgi);
+  }
+  .credentials1 {
+    width: 423px;
+    flex-direction: row;
+    padding: 0 0 var(--padding-4xs);
+  }
+  .invisible-1-icon3 {
+    position: absolute;
+    top: 52px;
+    left: 374px;
+    width: 21px;
+    height: 21px;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .password-input {
+    width: 423px;
+    height: 92px;
+    position: relative;
+    max-width: 100%;
+  }
+  .frame-input {
+    margin: 0;
+    height: 18px;
+    width: 15px;
+  }
+  
+  .frame-parent5 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-3xs);
+  }
+  
+  .frame-child5 {
+    height: 57px;
+    width: 423px;
+    position: relative;
+    border-radius: var(--br-7xs);
+    background: linear-gradient(180deg, #005389, #006db0);
+    display: none;
+    max-width: 100%;
+  }
+  .icon-login1 {
+    width: 30px;
+    height: 29.3px;
+    position: relative;
+    z-index: 3;
+  }
+  .login-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-10xs) 0 0;
+  }
+  .login3 {
+    text-decoration: none;
+    position: relative;
+    font-size: var(--font-size-5xl);
+    font-weight: 700;
+    font-family: var(--font-roboto);
+    color: var(--color-white);
+    text-align: left;
+    display: inline-block;
+    min-width: 62px;
+    z-index: 1;
+  }
+  .options1,
+  .rectangle-parent3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .rectangle-parent3 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-2xs) var(--padding-123xl) var(--padding-sm-7);
+    background-color: transparent;
+    width: 423px;
+    border-radius: var(--br-7xs);
+    background: linear-gradient(180deg, #005389, #006db0);
+    flex-direction: row;
+    gap: var(--gap-2xs);
+    z-index: 1;
+  }
+  .options1 {
+    align-self: stretch;
+    flex-direction: column;
+    padding: 0 0 var(--padding-8xl);
+    gap: var(--gap-13xl);
+  }
+  .dont-have-an1 {
+    font-weight: 300;
+    font-family: var(--font-roboto);
+    color: var(--color-white);
+  }
+  .span2 {
+    color: var(--color-midnightblue);
+    white-space: pre-wrap;
+  }
+  .register5 {
+    color: var(--color-yellow);
+  }
+  .register4 {
+    font-weight: 600;
+    font-family: var(--font-roboto);
+  }
+  .dont-have-an-container1 {
+    position: relative;
+    font-size: var(--font-size-base);
+    text-align: left;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .rectangle-parent2,
+  .registration {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-57xl) 0 var(--padding-58xl);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .rectangle-parent2 {
+    margin: 0;
+    box-shadow: 0 4px 64px rgba(0, 0, 0, 0.05);
+    border-radius: var(--br-3xs);
+    background-color: var(--color-steelblue);
+    border: 0.5px solid var(--color-gray);
+    flex-direction: column;
+    padding: var(--padding-42xl) var(--padding-16xl) var(--padding-25xl);
+    gap: var(--gap-10xl);
+    min-width: 505px;
+    z-index: 1;
+  }
+  .whatsapp-image-2024-09-17-at-1-icon1 {
+    align-self: stretch;
+    height: 414px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+    z-index: 1;
+  }
+  .whatsapp-image-2024-09-17-at-1-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 var(--padding-69xl);
+    box-sizing: border-box;
+    min-width: 387px;
+    max-width: 100%;
+  }
+  .frame-parent3 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    gap: var(--gap-67xl);
+    max-width: 100%;
+    height: 100%; /* Ensure the parent container has height */
+  }
+  
+  .national-university-of3 {
+    margin: 0;
+    flex: 1;
+    position: relative;
+    font-size: inherit;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    font-family: inherit;
+    z-index: 1;
+    text-align: center; /* Center the text */
+  }
+  
+  .footer2 {
+    width: 1065px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-51xl) 0 var(--padding-52xl);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .content-details,
+  .frame-parent2 {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .frame-parent2 {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-36xl);
+  }
+  .content-details {
+    flex: 1;
+    padding: var(--padding-40xl) 0 0;
+    box-sizing: border-box;
+    min-width: 771px;
+  }
+  .arrow-group,
+  .content-details,
+  .student-login,
+  .navigation {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .arrow-group {
+    flex: 1;
+    flex-direction: row;
+    gap: var(--gap-75xl);
+    max-width: 100%;
+    text-align: center;
+    font-size: var(--font-size-29xl);
+    color: var(--color-white);
+    font-family: var(--font-roboto);
+  }
+  .student-login,
+  .navigation {
+    box-sizing: border-box;
+  }
+  .navigation {
+    flex-direction: row;
+    padding: 0 var(--padding-5xl);
+    max-width: 100%;
+  }
+  .student-login {
+    width: 100%;
+    position: relative;
+    background: linear-gradient(
+      0deg,
+      #00aeef,
+      #009ee1 25%,
+      #0092d7 50%,
+      #0081c8 75%,
+      #0072bb
+    );
+    overflow: hidden;
+    flex-direction: column;
+    padding: 0 0 var(--padding-87xl);
+    gap: var(--gap-7xs);
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  @media screen and (max-width: 1200px) {
+    .frame-parent3 {
+      gap: var(--gap-24xl);
+    }
+    .footer2 {
+      padding-left: var(--padding-16xl);
+      padding-right: var(--padding-16xl);
+      box-sizing: border-box;
+    }
+    .arrow-group {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .sign-in-to1 {
+      font-size: var(--font-size-6xl);
+    }
+    .focal-person1 {
+      font-size: var(--font-size-7xl);
+    }
+    .rectangle-parent2 {
+      flex: 1;
+    }
+    .frame-parent3 {
+      flex-wrap: wrap;
+    }
+    .national-university-of3 {
+      font-size: var(--font-size-19xl);
+    }
+    .content-details {
+      padding-top: var(--padding-19xl);
+      box-sizing: border-box;
+      min-width: 100%;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .rectangle-parent3 {
+      flex-wrap: wrap;
+    }
+    .rectangle-parent2 {
+      padding-top: var(--padding-21xl);
+      padding-bottom: var(--padding-10xl);
+      box-sizing: border-box;
+      min-width: 100%;
+    }
+    .whatsapp-image-2024-09-17-at-1-wrapper {
+      padding-bottom: var(--padding-38xl);
+      box-sizing: border-box;
+      min-width: 100%;
+    }
+    .frame-parent3 {
+      gap: var(--gap-2xl);
+    }
+    .frame-parent2 {
+      gap: var(--gap-8xl);
+    }
+    .arrow-group {
+      gap: var(--gap-28xl);
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .welcome2 {
+      font-size: var(--font-size-xl);
+    }
+    .student-person1,
+    .sign-in-to1 {
+      font-size: var(--font-size-lgi);
+    }
+    .frame-parent4,
+    .remember-forgot {
+      flex-wrap: wrap;
+    }
+    .login3 {
+      font-size: var(--font-size-lgi);
+    }
+    .rectangle-parent3 {
+      padding-left: var(--padding-xl);
+      padding-right: var(--padding-xl);
+      box-sizing: border-box;
+    }
+    .options1 {
+      gap: var(--gap-base);
+    }
+    .registration {
+      padding-left: var(--padding-xl);
+      padding-right: var(--padding-xl);
+      box-sizing: border-box;
+    }
+    .national-university-of3 {
+      font-size: var(--font-size-10xl);
+    }
+    .content-details {
+      padding-top: var(--padding-6xl);
+      box-sizing: border-box;
+    }
+    .arrow-group {
+      gap: var(--gap-4xl);
+    }
+  }
+  
