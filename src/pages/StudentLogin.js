@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import GroupComponent from "../components/GroupComponent";
+import Swal from 'sweetalert2'; // Import SweetAlert2
 import "./StudentLogin.css";
 
 const StudentLogin = () => {
@@ -8,10 +9,8 @@ const StudentLogin = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const [notification, setNotification] = useState({ message: "", type: "" });
 
   const onArrowImageClick = useCallback(() => {
     navigate("/user");
@@ -23,10 +22,13 @@ const StudentLogin = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setErrorMessage("");
 
     if (!username || !password) {
-      setErrorMessage("Username and password are required.");
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Username and password are required!',
+      });
       return;
     }
 
@@ -48,20 +50,35 @@ const StudentLogin = () => {
         localStorage.setItem("token", result.token);
         localStorage.setItem("username", username);
 
-        setNotification({ message: "Login successful!", type: "success" });
-        setTimeout(() => {
-          navigate("/student-dashboard"); // Navigate to the student dashboard
-        }, 1500);
-      } else {
-        setErrorMessage(result.error || "Invalid username or password.");
-      }
-    } catch (error) {
-      console.error("Error during login:", error);
-      setErrorMessage("An error occurred during login.");
-    } finally {
-      setLoading(false);
-    }
-  };
+         Swal.fire({
+                  icon: 'success',
+                  title: 'Login Successful!',
+                  text: 'Redirecting to your dashboard...',
+                  timer: 1500,
+                  showConfirmButton: false,
+                });
+        
+                setTimeout(() => {
+                  navigate("/student-dashboard");
+                }, 1500);
+              } else {
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Login Failed',
+                  text: result.error || "Invalid username or password.",
+                });
+              }
+            } catch (error) {
+              console.error("Error during login:", error);
+              Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: "An error occurred during login.",
+              });
+            } finally {
+              setLoading(false);
+            }
+          };
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
@@ -135,13 +152,6 @@ const StudentLogin = () => {
                     </button>
                   </div>
 
-                  {errorMessage && <div className="error-message">{errorMessage}</div>}
-                  {notification.message && (
-                    <div className={`notification ${notification.type}`}>
-                      {notification.message}
-                    </div>
-                  )}
-
                   <div className="options">
                     <button className="rectangle-container" type="submit" disabled={loading}>
                       <div className="frame-inner" />
@@ -162,7 +172,6 @@ const StudentLogin = () => {
                     </div>
                   </div>
                 </form>
-
                 <div className="footer">
                   <img
                     className="whatsapp-image-2024-09-17-at-1-icon"
@@ -176,20 +185,21 @@ const StudentLogin = () => {
           </div>
         </section>
       </main>
-{/* Footer Section */}
-<footer className="footer-section">
+
+      <footer className="footer-section">
         <div className="footer-container">
           {/* Left Section */}
           <div className="footer-left">
             <div className="footer-contact">
               <h4>
-              <img 
-            src="/image-1@2x.png" 
-            alt="NUML Logo" 
-            className="footer-logo" 
-            style={{ width: "30px", height: "30px", marginRight: "10px" }} 
-          />
-                National University of Modern Languages</h4>
+                <img
+                  src="/image-1@2x.png"
+                  alt="NUML Logo"
+                  className="footer-logo"
+                  style={{ width: "30px", height: "30px", marginRight: "10px" }}
+                />
+                National University of Modern Languages
+              </h4>
               <p>Khadim Hussain Rd, Lalazar, Rawalpindi</p>
               <p>📞 +92-51-9265100</p>
               <p>✉️ info@numl.edu.pk</p>
@@ -248,33 +258,7 @@ const StudentLogin = () => {
         </div>
       </footer>
     </div>
-      );
-    };
-      <style>
-        {`
-          .notification {
-            position: fixed;
-            top: 60px;
-            right: 20px;
-            padding: 15px 20px;
-            border-radius: 5px;
-            color: white;
-            z-index: 1000;
-            font-size: 20px;
-            transition: opacity 0.3s ease;
-          }
-          .notification.success {
-            background-color: blue;
-          }
-          .notification.error {
-            background-color: #f44336;
-          }
-          .error-message {
-            color: #f44336;
-            margin-bottom: 20px;
-          }
-        `}
-      </style>
- 
+  );
+};
 
 export default StudentLogin;

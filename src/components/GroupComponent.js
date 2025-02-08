@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import GroupComponent1 from "./GroupComponent1";
 import "./GroupComponent.css";
@@ -12,10 +12,19 @@ const GroupComponent = ({
   type = "text", // Default type
   style = {}, // Combine all style props into one
 }) => {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setAnimate(true);
+  }, []);
+
   const groupDivStyle = useMemo(() => ({ ...style }), [style]);
 
   return (
-    <div className={`user-name-parent ${className}`} style={groupDivStyle}>
+    <div
+      className={`user-name-parent ${className} ${animate ? "animate" : ""}`}
+      style={groupDivStyle}
+    >
       <div className="user-name">{userName}</div>
       <GroupComponent1
         enterYourPasswordPlaceholder={enterYourPasswordPlaceholder}

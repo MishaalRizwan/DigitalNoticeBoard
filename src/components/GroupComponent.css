@@ -1,9 +1,30 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .user-name {
   width: 391px;
   position: relative;
   display: inline-block;
   flex-shrink: 0;
   max-width: 100%;
+  animation: fadeIn 1s ease-out;
 }
 
 .user-name-parent {
@@ -22,10 +43,61 @@
   font-size: var(--font-size-xl);
   color: var(--color-white);
   font-family: var(--font-roboto);
+  animation: slideUp 1s ease-out;
 }
 
 @media screen and (max-width: 450px) {
   .user-name {
     font-size: var(--font-size-base);
   }
+}
+.user-name-parent.animate {
+  animation: slideUp 1s ease-out;
+}
+
+.user-name.animate {
+  animation: fadeIn 1s ease-out;
+}
+@keyframes buttonScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes buttonPulse {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: var(--font-size-base);
+}
+
+button:hover {
+  background-color: var(--color-primary-hover);
+  animation: buttonScale 0.3s ease-in-out;
+}
+
+button:active {
+  animation: buttonPulse 1s infinite;
 }

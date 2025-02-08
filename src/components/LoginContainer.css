@@ -353,3 +353,70 @@
     gap: var(--gap-9xl);
   }
 }
+/* Adding animation to login buttons */
+.login6,
+.login8,
+.sign-up,
+.sign-up2 {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.login6:hover,
+.login8:hover,
+.sign-up:hover,
+.sign-up2:hover {
+  transform: scale(1.05); /* Slightly enlarge the button */
+  opacity: 0.9; /* Fade effect on hover */
+}
+
+/* Animation for the login container */
+.login-container {
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Slide-in animation for the whole container */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Fade-in effect for inputs */
+.login-inputs, 
+.login-inputs1 {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Adding an animation for text */
+.login7,
+.sign-up1,
+.focal-person2,
+.student2 {
+  animation: textAppear 1s ease-out;
+}
+
+@keyframes textAppear {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+

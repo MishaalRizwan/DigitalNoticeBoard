@@ -1,45 +1,33 @@
-import {jwtDecode } from 'jwt-decode'; // Ensure this is imported correctly
+import { jwtDecode } from "jwt-decode"; // Ensure correct import
+
+const getToken = () => localStorage.getItem("token");
 
 export const isAuthenticated = () => {
-  const token = localStorage.getItem("token");
-  if (!token) return false; // Return false if no token exists
-  return !isTokenExpired(token);
+  const token = getToken();
+  return token ? !isTokenExpired(token) : false;
 };
 
 export const isTokenExpired = (token) => {
-  if (!token) return true; // If there's no token, it's considered expired
   try {
+    if (!token) return true;
     const decodedToken = jwtDecode(token);
-    const currentTime = Date.now() / 1000; // Get the current time in seconds
-    return decodedToken.exp < currentTime; // Check if the token is expired
+    if (!decodedToken.exp) return true; // Handle missing 'exp' field
+    return decodedToken.exp < Date.now() / 1000;
   } catch (error) {
-    console.error("Error decoding token:", error);
-    return true; // If token is invalid, treat it as expired
+    console.error("Invalid or expired token:", error);
+    return true;
   }
 };
 
-export const isAdmin = () => {
-  const token = localStorage.getItem("token");
-  if (!token) return false;
-
+export const getUserRole = () => {
+  const token = getToken();
   try {
-    const decodedToken = jwtDecode(token);
-    return decodedToken.role === 'admin'; // Check if the role is 'admin'
+    return token ? jwtDecode(token).role || null : null;
   } catch (error) {
     console.error("Error decoding token:", error);
-    return false;
+    return null;
   }
 };
 
-export const isFocalPerson = () => {
-  const token = localStorage.getItem("token");
-  if (!token) return false;
-
-  try {
-    const decodedToken = jwtDecode(token);
-    return decodedToken.role === 'focal'; // Check if the role is 'focal'
-  } catch (error) {
-    console.error("Error decoding token:", error);
-    return false;
-  }
-};
+export const isAdmin = () => getUserRole() === "admin";
+export const isFocalPerson = () => getUserRole() === "focal";

@@ -135,5 +135,46 @@ body {
   --br-88xl: 107px;
   --br-xl: 20px;
 }  
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.loading-spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;  /* Ensure it appears above all content */
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;  /* Ensure the body takes up full height */
+  width: 100%;   /* Ensure the body takes up full width */
+}
+
+#root {
+  height: 100%;  /* Make sure root div is full height */
+  width: 100%;   /* Make sure root div is full width */
+}
+
+
 
 

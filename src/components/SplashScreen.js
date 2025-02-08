@@ -5,6 +5,7 @@ import "./SplashScreen.css"; // Import CSS for styling
 
 const SplashScreen = ({ onLoadComplete }) => {
   useEffect(() => {
+    
     const timer = setTimeout(() => {
       onLoadComplete(); // Call the function passed as a prop
     }, 4000); // Show splash screen for 3 seconds

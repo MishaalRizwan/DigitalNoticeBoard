@@ -497,4 +497,36 @@
       gap: var(--gap-4xl);
     }
   }
+  /* Logo Animation */
+@keyframes logo-bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Slight zoom effect */
+  }
+}
+
+.image-1-icon {
+  height: 63px;
+  width: 63px;
+  border-radius: var(--br-88xl);
+  object-fit: cover;
+  animation: logo-bounce 3s infinite ease-in-out; /* Apply animation */
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Optional Hover Effect for More Interactivity */
+.image-1-icon:hover {
+  transform: rotate(10deg) scale(1.15);
+}
+@keyframes flipLogo {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+.image-1-icon:hover {
+  animation: flipLogo 1.5s ease-in-out;
+}
   

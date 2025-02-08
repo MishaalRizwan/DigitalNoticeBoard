@@ -1,28 +1,54 @@
+/* Fade-in effect for the confirm password title */
+@keyframes confirmPasswordFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .confrim-password {
   width: 400px;
-  position:absolute;
-  display:contents;
+  position: absolute;
+  display: contents;
+  animation: confirmPasswordFadeIn 0.5s ease-out forwards;
 }
+
+/* Slide-in effect for the confirm password parent */
+@keyframes confirmPasswordParentSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .confrim-password-parent {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   margin-top: 10px;
-  display:inline-flex;
-  flex-direction:column;
+  display: inline-flex;
+  flex-direction: column;
   align-items: flex-start;
-  justify-content:flex-start;
+  justify-content: flex-start;
   gap: var(--gap-4xs-5);
-
   z-index: 1;
   text-align: left;
   font-size: var(--font-size-xl);
-  color: var(--color-white);
+  color: var(--color-green);
   font-family: var(--font-roboto);
+  animation: confirmPasswordParentSlideIn 0.5s ease-out forwards;
 }
-@media screen and (max-width: 450px) {
-  .confrim-password {
-    font-size: var(--font-size-base);
-  }
+
+/* Optional: Add smooth transitions for any hover or focus states */
+.confrim-password-parent:hover {
+  animation: confirmPasswordParentSlideIn 0.3s ease-in-out forwards;
 }

@@ -5,7 +5,7 @@ import "./GroupComponent1.css";
 const GroupComponent1 = ({
   className = "",
   enterYourPasswordPlaceholder = "Enter your password",
-  style = {}, // Combine width and color into a style object
+  style = {},
   value = "",
   onChange,
   type = "text", // Default type
@@ -18,8 +18,8 @@ const GroupComponent1 = ({
       <input
         className="enter-your-password"
         placeholder={enterYourPasswordPlaceholder}
-        type={type} // Apply type dynamically
-        style={inputStyle} // Apply dynamic styles
+        type={type}
+        style={inputStyle}
         value={value}
         onChange={onChange}
       />
@@ -30,7 +30,7 @@ const GroupComponent1 = ({
 GroupComponent1.propTypes = {
   className: PropTypes.string,
   enterYourPasswordPlaceholder: PropTypes.string,
-  style: PropTypes.object, // Combine width and color props into a style object
+  style: PropTypes.object,
   value: PropTypes.string,
   onChange: PropTypes.func,
   type: PropTypes.string,

@@ -29,18 +29,22 @@
     "react-big-calendar": "^1.14.1",
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18.2.0",
+    "react-loader-spinner": "^6.1.6",
     "react-lottie": "^1.2.4",
     "react-router": "^7.1.1",
     "react-router-dom": "^6.28.1",
     "react-scripts": "5.0.1",
+    "react-spinners": "^0.15.0",
     "react-sweetalert2": "^0.6.0",
     "react-toastify": "^10.0.6",
-    "sweetalert2": "^11.14.3",
+    "react-transition-group": "^4.4.5",
+    "styled-components": "^6.1.15",
+    "sweetalert2": "^11.15.10",
     "sweetalert2-react-content": "^5.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start --port 3000",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -63,5 +67,6 @@
   "devDependencies": {
     "eslint": "^9.11.1",
     "eslint-plugin-react": "^7.36.1"
-  }
+  },
+  "proxy": "https://zenquotes.io"
 }

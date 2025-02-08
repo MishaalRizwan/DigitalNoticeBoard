@@ -1,8 +1,8 @@
 import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import GroupComponent from "../components/GroupComponent";
+import Swal from "sweetalert2"; // Import SweetAlert2
 import "./AdminLogin.css";
-
 
 const AdminLogin = () => {
   const navigate = useNavigate();
@@ -11,12 +11,10 @@ const AdminLogin = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const [notification, setNotification] = useState({ message: "", type: "" });
 
   const onArrowImageClick = useCallback(() => {
     navigate("/user");
   }, [navigate]);
-
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -44,10 +42,16 @@ const AdminLogin = () => {
         localStorage.setItem("token", result.token);
         localStorage.setItem("username", username);
 
-        setNotification({ message: "Login successful!", type: "success" });
-        setTimeout(() => {
+        // SweetAlert2 Success
+        Swal.fire({
+          icon: "success",
+          title: "Login Successful!",
+          text: "Redirecting to Admin page...",
+          showConfirmButton: false,
+          timer: 1500,
+        }).then(() => {
           navigate("/adminfunction");
-        }, 1500);
+        });
       } else {
         setErrorMessage(result.error || "Invalid username or password.");
       }
@@ -65,7 +69,7 @@ const AdminLogin = () => {
 
   return (
     <div className="admin-login">
-      <img className="back-icon" alt="" src="/back@2x.png"/>
+      <img className="back-icon" alt="" src="/back@2x.png" />
       <header className="rectangle-parent">
         <div className="frame-child" />
         <img className="image-1-icon" loading="lazy" alt="" src="/image-1@2x.png" />
@@ -81,13 +85,12 @@ const AdminLogin = () => {
             <div className="frame-parent">
               <div className="frame-group">
                 <form className="rectangle-group" onSubmit={handleLogin}>
-                <div className="welcome-message">
-  <h3 className="welcome">Welcome!</h3>
-  <h1 className="sign-in-to-admin">
-    Login to <span className="admin">Admin</span>
-  </h1>
-</div>
-
+                  <div className="welcome-message">
+                    <h3 className="welcome">Welcome!</h3>
+                    <h1 className="sign-in-to-admin">
+                      Login to <span className="admin">Admin</span>
+                    </h1>
+                  </div>
 
                   <div className="credentials">
                     <GroupComponent
@@ -121,11 +124,6 @@ const AdminLogin = () => {
                   </div>
 
                   {errorMessage && <div className="error-message">{errorMessage}</div>}
-                  {notification.message && (
-                    <div className={`notification ${notification.type}`}>
-                      {notification.message}
-                    </div>
-                  )}
 
                   <div className="options">
                     <button className="rectangle-container" type="submit" disabled={loading}>
@@ -137,7 +135,6 @@ const AdminLogin = () => {
                     </button>
                   </div>
 
-                
                 </form>
 
                 <div className="footer">
@@ -153,20 +150,22 @@ const AdminLogin = () => {
           </div>
         </section>
       </main>
-{/* Footer Section */}
-<footer className="footer-section">
+
+      {/* Footer Section */}
+      <footer className="footer-section">
         <div className="footer-container">
           {/* Left Section */}
           <div className="footer-left">
             <div className="footer-contact">
               <h4>
-              <img 
-            src="/image-1@2x.png" 
-            alt="NUML Logo" 
-            className="footer-logo" 
-            style={{ width: "30px", height: "30px", marginRight: "10px" }} 
-          />
-                National University of Modern Languages</h4>
+                <img 
+                  src="/image-1@2x.png" 
+                  alt="NUML Logo" 
+                  className="footer-logo" 
+                  style={{ width: "30px", height: "30px", marginRight: "10px" }} 
+                />
+                National University of Modern Languages
+              </h4>
               <p>Khadim Hussain Rd, Lalazar, Rawalpindi</p>
               <p>📞 +92-51-9265100</p>
               <p>✉️ info@numl.edu.pk</p>
@@ -216,8 +215,7 @@ const AdminLogin = () => {
             2024 © NUML All Rights Reserved developed by{" "}
             <a href="https://ict.numl.edu.pk/" target="_blank" rel="noreferrer">
               ICT Department
-            </a>{" "}
-            |{" "}
+            </a>{" "} |{" "}
             <a href="/privacy-policy" target="_blank" rel="noreferrer">
               Privacy Policy
             </a>
@@ -225,34 +223,7 @@ const AdminLogin = () => {
         </div>
       </footer>
     </div>
-      );
-    };
-      <style>
-        {`
-          .notification {
-            position: fixed;
-            top: 60px;
-            right: 20px;
-            padding: 15px 20px;
-            border-radius: 5px;
-            color: white;
-            z-index: 1000;
-            font-size: 20px;
-            transition: opacity 0.3s ease;
-          }
-          .notification.success {
-            background-color: blue; 
-          }
-          .notification.error {
-            background-color: #f44336; /* Red */
-          }
-          .error-message {
-            color: #f44336;
-            margin-bottom: 20px;
-          }
-        `}
-      </style>
-    
-
+  );
+};
 
 export default AdminLogin;

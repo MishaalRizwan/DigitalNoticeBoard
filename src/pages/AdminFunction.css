@@ -1,12 +1,27 @@
-/* AdminFunction.css */
-
-/* Make the body or a container scrollable */
-.container {
-  height: 100vh; /* Full viewport height */
-  overflow-y: auto; /* Enables vertical scrolling */
+/* Global styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Toggle Button Styles */
+/* AdminFunction container */
+.container {
+  height: 100%; /* Full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Vertical scrolling */
+}
+
+/* Content area for each page */
+.content {
+  padding: 20px;
+  flex-grow: 1; /* Allow the content to take up the remaining space */
+  overflow-y: auto; /* Enable scrolling inside the content area */
+}
+
+/* Other styles for sidebar, navbar, etc. */
 .toggle-button {
   background-color: transparent;
   border: none;
@@ -38,10 +53,4 @@
 
 .line3-collapsed {
   transform: rotate(-45deg) translate(5px, -5px); /* Rotate the third line */
-}
-
-/* Optional: Add some padding or margins for better layout */
-.content {
-  padding: 20px;
-  margin-bottom: 50px; /* To create space for footer or bottom elements */
 }
