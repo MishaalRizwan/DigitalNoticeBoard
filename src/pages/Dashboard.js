@@ -55,6 +55,7 @@ function DashboardPage() {
       try {
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&units=metric`);
         setWeatherData(response.data);
+        localStorage.setItem('weatherData', JSON.stringify(response.data)); // Store in localStorage
         setLoading(false);
       } catch (err) {
         setLoading(false);
@@ -96,20 +97,24 @@ function DashboardPage() {
     localStorage.setItem('tickerText', newText);
   };
  
-  // Fetch a random quote
   useEffect(() => {
     fetch('/api/random')
       .then(response => response.json())
       .then(data => {
+        console.log('Fetched data:', data); // Log the API response
+  
         if (Array.isArray(data) && data.length > 0) {
           setQuote(data[0].q);  // Use 'q' for quote
           setAuthor(data[0].a);  // Use 'a' for author
+          localStorage.setItem('quote', data[0].q); // Store quote in localStorage
+          localStorage.setItem('author', data[0].a); // Store author in localStorage
         }
       })
       .catch(error => {
         console.error('Error fetching quote:', error);
       });
   }, []);
+  
 
   const getCurrentDayTimetable = () => {
     const currentDay = moment().format('dddd');
@@ -286,7 +291,7 @@ function DashboardPage() {
 
  {/* Main Dashboard Flyers (Center Content) */}
  <div style={{ display: 'flex', flexDirection: 'column', flex: 1, padding: '10px' }}>
-          <ImageSorter events={events} /> {/* Pass events to ImageSorter component */}
+          <ImageSorter events={events}/> {/* Pass events to ImageSorter component */}
         </div>
       </div>
 
@@ -313,7 +318,7 @@ function DashboardPage() {
               onInput={handleTickerTextChange}
               style={{
                 display: 'inline-block',
-                animation: isEditing ? 'none' : 'scrollNotice 10s linear infinite',
+                animation: isEditing ? 'none' : 'scrollNotice 7s linear infinite',
                 fontWeight: 'bold',
                 fontSize: '20px',
                 cursor: 'text',

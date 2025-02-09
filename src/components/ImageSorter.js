@@ -23,7 +23,7 @@ const fadeOut = keyframes`
   }
 `;
 
-// Styled components
+// Styled components with conditional dimensions
 const ImageContainer = styled.div`
   flex-grow: 1;
   display: flex;
@@ -36,7 +36,7 @@ const ImageContainer = styled.div`
 
 const ImageWrapper = styled.div`
   width: 100%;
-  height: 280px;
+  height: ${(props) => (props.layout === 'student' ? '300px' : '200px')}; /* Larger for student */
   flex-grow: 1;
   border-radius: 5px;
   overflow: hidden;
@@ -61,9 +61,9 @@ const ColumnImage = styled.div`
   border-radius: 5px;
   overflow: hidden;
   margin: 10px;
-  width: 90%;
+  width: ${(props) => (props.layout === 'student' ? '90%' : '90%')}; /* Slightly larger for student */
   flex-grow: 1;
-  height: 270px;
+  height: ${(props) => (props.layout === 'student' ? '370px' : '270px')}; /* Larger for student */
   box-sizing: border-box;
   border: 2px solid black;
   background-image: url(${(props) => props.bgImage});
@@ -72,7 +72,7 @@ const ColumnImage = styled.div`
   animation: ${(props) => (props.fadeOut ? fadeOut : slideIn)} 1s ease-out;
 `;
 
-function ImageSorter({ events }) {
+function ImageSorter({ events, layout = 'admin' }) {
   const [filteredEvents, setFilteredEvents] = useState([]);
 
   useEffect(() => {
@@ -92,18 +92,18 @@ function ImageSorter({ events }) {
         <>
           {/* First Image */}
           <ImageContainer>
-            <ImageWrapper bgImage={filteredEvents[0]?.image} />
+            <ImageWrapper bgImage={filteredEvents[0]?.image} layout={layout} />
           </ImageContainer>
 
           {/* Second Image */}
           <ImageContainer>
-            <ImageWrapper bgImage={filteredEvents[1]?.image} />
+            <ImageWrapper bgImage={filteredEvents[1]?.image} layout={layout} />
           </ImageContainer>
 
           {/* Third and Fourth Images in a column */}
           <ColumnContainer>
-            <ColumnImage bgImage={filteredEvents[2]?.image} />
-            <ColumnImage bgImage={filteredEvents[3]?.image} />
+            <ColumnImage bgImage={filteredEvents[2]?.image} layout={layout} />
+            <ColumnImage bgImage={filteredEvents[3]?.image} layout={layout} />
           </ColumnContainer>
         </>
       )}

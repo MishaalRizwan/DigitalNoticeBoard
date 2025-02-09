@@ -196,7 +196,7 @@ const Settings = () => {
         </Row>
 
         <Button variant="primary" type="submit" className="mt-4">
-          Update User Settings
+          Update Settings
         </Button>
       </Form>
 
